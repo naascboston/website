@@ -72,7 +72,37 @@ header .btn.alt:hover{background:var(--main);border-color:var(--main);color:#0b2
 footer{background:var(--main);color:#0b2447;text-align:center;padding:48px 20px;font-size:18px;letter-spacing:.08em}
 footer a{color:#114488}
 
+/* Dropdown nav */
+.dd{position:relative}
+.sub{display:none;position:absolute;left:0;top:100%;min-width:330px;background:#114488;border-top:3px solid var(--main);box-shadow:0 16px 30px rgba(11,36,71,.25);z-index:30;padding:6px 0}
+.dd:hover .sub,.dd:focus-within .sub{display:block}
+.dd>a::after{content:" ▾";font-size:16px}
+.dd.here>a{border-bottom-color:var(--main)}
+.sub a{display:block;padding:14px 20px;border-bottom:0;letter-spacing:.08em;line-height:1.35}
+.sub a:hover,.sub a[aria-current="page"]{background:rgba(255,255,255,.14)}
+
+/* Event pages */
+.callout{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--accent);box-shadow:0 14px 36px rgba(146,193,233,.35);padding:40px 36px}
+.callout p:last-child{margin:0}
+.objectives{padding-left:1.2em;margin:0}
+.objectives li{margin-bottom:.9em}
+.objectives strong{color:var(--accent)}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}
+.slide{flex:0 0 calc(50% - 8px);aspect-ratio:4/3;margin:0;position:relative;scroll-snap-align:start;background:var(--main);display:flex;align-items:center;justify-content:center;color:#114488;font-weight:600;overflow:hidden;box-shadow:0 14px 36px rgba(146,193,233,.5)}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.car-btns{margin-top:16px}
+
+/* Bound in Blue */
+.feature-photo{margin:32px 0 0;max-width:900px;aspect-ratio:16/9;position:relative;background:var(--main);display:flex;align-items:center;justify-content:center;color:#114488;font-weight:600;overflow:hidden;box-shadow:0 14px 36px rgba(146,193,233,.5)}
+.feature-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.embed{position:relative;overflow:hidden;height:700px;width:100%;max-width:900px}
+.embed iframe{position:absolute;border:0;top:0;left:0;bottom:0;right:0;width:100%;height:100%}
+
 @media(max-width:700px){
+nav{width:100%;flex-direction:column}
+.sub{position:static;display:block;box-shadow:none;border-top:0;min-width:0;padding:0 0 0 14px}
+.dd>a::after{content:""}
+.slide{flex-basis:100%}
 .hero .wrap{grid-template-columns:1fr}
 .logo-box{width:200px;max-width:100%;display:block}
 .events li{grid-template-columns:1fr}
