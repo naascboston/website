@@ -117,3 +117,14 @@ nav{order:3}
 .brand{margin-right:auto}
 nav{flex:1 0 100%;justify-content:center;gap:18px;border-top:1px solid rgba(146,193,233,.45);padding-top:6px}
 }
+
+/* Mobile menu toggle */
+.nav-toggle{display:none;order:3;font:inherit;font-size:16px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:transparent;color:#fff;border:2px solid #fff;padding:10px 20px;cursor:pointer}
+.nav-toggle:hover{background:rgba(255,255,255,.14)}
+nav{order:4}
+@media(max-width:700px){
+.brand{margin-right:auto}
+.nav-toggle{display:inline-block}
+nav{display:none}
+nav.open{display:flex;max-height:calc(100vh - 140px);overflow-y:auto}
+}
