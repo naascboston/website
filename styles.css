@@ -3,7 +3,7 @@
 body{margin:0;background:var(--bg);color:var(--text);font-family:"Jost","Helvetica Neue",Arial,sans-serif;font-size:22px;line-height:1.6;letter-spacing:.005em}
 h1,h2,h3{font-size:32px;line-height:1.25;margin:0 0 .6em;color:var(--accent);font-weight:600}
 h2{margin-bottom:1.1em}
-h2::after{content:"";display:block;width:72px;height:2px;background:var(--main);margin-top:14px}
+h2::after{content:"";display:block;width:72px;height:2px;background:#114488;margin-top:14px}
 p{margin:0 0 1em}
 a{color:var(--accent)}
 :focus-visible{outline:4px solid var(--accent);outline-offset:3px}
